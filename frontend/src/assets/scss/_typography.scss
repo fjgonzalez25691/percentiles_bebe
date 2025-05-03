@@ -1,0 +1,75 @@
+// assets/scss/_typography.scss
+
+// Estilos de tipografía
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $headings-font-weight;
+    line-height: 1.2;
+    margin-bottom: $spacer;
+    color: $dark;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: $primary;
+    
+    @media (max-width: 768px) {
+      font-size: 1.75rem;
+    }
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    
+    @media (max-width: 768px) {
+      font-size: 1.25rem;
+    }
+  }
+  
+  h4 {
+    font-size: 1.25rem;
+  }
+  
+  p {
+    margin-bottom: $spacer;
+  }
+  
+  .text-muted {
+    color: rgba($dark, 0.6) !important;
+  }
+  
+  // Enlaces
+  a {
+    color: $primary;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    
+    &:hover {
+      color: darken($primary, 10%);
+      text-decoration: underline;
+    }
+  }
+  
+  // Texto pequeño
+  small, .small {
+    font-size: 85%;
+    opacity: 0.8;
+  }
+  
+  // Texto en negrita
+  strong, .bold {
+    font-weight: 700;
+  }
+  
+  // Texto de ayuda
+  .form-text {
+    font-size: 0.85rem;
+    color: rgba($dark, 0.6);
+  }

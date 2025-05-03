@@ -1,0 +1,6 @@
+# This is a sample .gitignore file for a Python project with Node.js dependencies
+# Python bytecode files     
+venv/
+
+# Node.js dependencies
+node_modules/

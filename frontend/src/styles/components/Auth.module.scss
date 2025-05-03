@@ -1,0 +1,102 @@
+// styles/components/Auth.module.scss
+
+.authContainer {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .authCard {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: none;
+    
+    &:hover {
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+  }
+  
+  .authTitle {
+    color: var(--bs-primary);
+    font-weight: 700;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  
+  .formActions {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .submitButton {
+    min-width: 150px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+  }
+  
+  .authFooter {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    
+    a {
+      color: var(--bs-primary);
+      font-weight: 600;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  .forgotPassword {
+    text-align: right;
+    margin-top: 0.5rem;
+    
+    a {
+      font-size: 0.9rem;
+      color: var(--bs-secondary);
+      
+      &:hover {
+        color: var(--bs-primary);
+      }
+    }
+  }
+  
+  .authError {
+    background-color: rgba(244, 67, 54, 0.1);
+    border-left: 4px solid var(--bs-danger);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+  }
+  
+  .authSuccess {
+    background-color: rgba(76, 175, 80, 0.1);
+    border-left: 4px solid var(--bs-success);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+  }
+  
+  @media (max-width: 576px) {
+    .authContainer {
+      margin: 1rem auto;
+    }
+    
+    .authCard {
+      border-radius: 8px;
+    }
+    
+    .authTitle {
+      font-size: 1.5rem;
+    }
+  }

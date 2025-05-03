@@ -1,0 +1,114 @@
+// assets/scss/_base.scss
+
+// Estilos base para toda la aplicación
+html, body {
+    height: 100%;
+    font-size: 16px;
+  }
+  
+  body {
+    background-color: #f9f9f9;
+    color: $dark;
+    font-family: $font-family-sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  // Contenedor principal
+  .app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacer;
+  }
+  
+  // Estilos para tarjetas
+  .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: $spacer * 2;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+    
+    .card-header {
+      background-color: white;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      padding: 1.25rem 1.5rem;
+    }
+    
+    .card-body {
+      padding: 1.5rem;
+    }
+  }
+  
+  // Estilos para tablas
+  .table {
+    --bs-table-striped-bg: rgba(0, 121, 107, 0.03);
+    
+    thead {
+      background-color: rgba(0, 121, 107, 0.08);
+      
+      th {
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 0.85rem;
+        padding: 1rem 0.75rem;
+        border-bottom: none;
+      }
+    }
+    
+    tbody {
+      tr {
+        vertical-align: middle;
+        
+        td {
+          padding: 0.85rem 0.75rem;
+        }
+        
+        &:hover {
+          background-color: rgba(0, 121, 107, 0.05);
+        }
+      }
+    }
+  }
+  
+  // Estilos para alertas
+  .alert {
+    border: none;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    
+    &.alert-success {
+      background-color: rgba(76, 175, 80, 0.15);
+      color: darken($success, 10%);
+    }
+    
+    &.alert-danger {
+      background-color: rgba(244, 67, 54, 0.15);
+      color: darken($danger, 10%);
+    }
+    
+    &.alert-info {
+      background-color: rgba(41, 182, 246, 0.15);
+      color: darken($info, 10%);
+    }
+  }
+  
+  // Diseño responsivo
+  @media (max-width: 768px) {
+    .card {
+      margin-bottom: 1.5rem;
+    }
+    
+    .table-responsive {
+      border-radius: 8px;
+      overflow: hidden;
+    }
+  }

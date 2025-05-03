@@ -1,0 +1,90 @@
+// assets/scss/_layout.scss
+
+// Estilos de layout
+.container {
+    padding: $spacer;
+    
+    @media (min-width: 992px) {
+      padding: $spacer * 2;
+    }
+  }
+  
+  // Navbar
+  .navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: $spacer 0;
+    background-color: white !important;
+    
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: $primary !important;
+    }
+    
+    .nav-link {
+      font-weight: 600;
+      padding: 0.5rem 1rem !important;
+      color: $dark !important;
+      transition: color 0.2s ease;
+      
+      &:hover, &:focus {
+        color: $primary !important;
+      }
+      
+      &.active {
+        color: $primary !important;
+      }
+    }
+  }
+  
+  // Espaciado
+  .mt-1 { margin-top: $spacer * 0.25 !important; }
+  .mt-2 { margin-top: $spacer * 0.5 !important; }
+  .mt-3 { margin-top: $spacer !important; }
+  .mt-4 { margin-top: $spacer * 1.5 !important; }
+  .mt-5 { margin-top: $spacer * 3 !important; }
+  
+  .mb-1 { margin-bottom: $spacer * 0.25 !important; }
+  .mb-2 { margin-bottom: $spacer * 0.5 !important; }
+  .mb-3 { margin-bottom: $spacer !important; }
+  .mb-4 { margin-bottom: $spacer * 1.5 !important; }
+  .mb-5 { margin-bottom: $spacer * 3 !important; }
+  
+  // Flexbox utilities
+  .d-flex { display: flex !important; }
+  .flex-column { flex-direction: column !important; }
+  .justify-content-between { justify-content: space-between !important; }
+  .justify-content-center { justify-content: center !important; }
+  .align-items-center { align-items: center !important; }
+  .flex-grow-1 { flex-grow: 1 !important; }
+  
+  // Gaps
+  .gap-1 { gap: $spacer * 0.25 !important; }
+  .gap-2 { gap: $spacer * 0.5 !important; }
+  .gap-3 { gap: $spacer !important; }
+  .gap-4 { gap: $spacer * 1.5 !important; }
+  .gap-5 { gap: $spacer * 3 !important; }
+  
+  // Secciones
+  .section {
+    margin-bottom: $spacer * 3;
+    
+    &-title {
+      margin-bottom: $spacer * 1.5;
+      padding-bottom: $spacer * 0.5;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  // Página de inicio de sesión/registro
+  .auth-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: $spacer * 2;
+    
+    .card {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+  }

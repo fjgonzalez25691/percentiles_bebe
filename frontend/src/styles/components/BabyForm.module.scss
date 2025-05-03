@@ -1,0 +1,39 @@
+// styles/components/BabyForm.module.scss
+
+.formTitle {
+    color: var(--bs-primary);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .formSection {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+  
+  .formActions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  
+  .prematureSection {
+    background-color: rgba(0, 0, 0, 0.02);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    border-left: 4px solid var(--bs-info);
+  }
+  
+  .helpText {
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 0.5rem;
+  }
