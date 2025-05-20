@@ -4,3 +4,5 @@ venv/
 
 # Node.js dependencies
 node_modules/
+
+*.pyc

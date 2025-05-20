@@ -131,13 +131,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Configuración de CORS
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "http://localhost:5173",
 ]
+
+
 
 # Configuración de rest_framework
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.TokenAuthentication',  # Cambiado a TokenAuthentication
     ],
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',

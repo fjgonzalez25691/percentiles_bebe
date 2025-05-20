@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, Link } from 'react-router-dom';
 import { Container, Row, Col, Navbar, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/scss/main.scss'; // Importa tus estilos personalizados
@@ -59,21 +59,21 @@ function App() {
     <Router>
       <Navbar bg="primary" variant="dark" expand="lg">
         <Container>
-          <Navbar.Brand href="/">Seguimiento de Crecimiento Infantil</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/">Seguimiento de Crecimiento Infantil</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               {isAuthenticated ? (
                 <>
-                  <Nav.Link href="/babies">Mis Bebés</Nav.Link>
-                  <Nav.Link href="/measurements">Mediciones</Nav.Link>
-                  <Nav.Link href="/charts">Gráficos</Nav.Link>
+                  <Nav.Link as={Link} to="/babies">Mis Bebés</Nav.Link>
+                  <Nav.Link as={Link} to="/measurements">Mediciones</Nav.Link>
+                  <Nav.Link as={Link} to="/charts">Gráficos</Nav.Link>
                   <Nav.Link onClick={handleLogout}>Cerrar Sesión</Nav.Link>
                 </>
               ) : (
                 <>
-                  <Nav.Link href="/login">Iniciar Sesión</Nav.Link>
-                  <Nav.Link href="/register">Registrarse</Nav.Link>
+                  <Nav.Link as={Link} to="/login">Iniciar Sesión</Nav.Link>
+                  <Nav.Link as={Link} to="/register">Registrarse</Nav.Link>
                 </>
               )}
             </Nav>
